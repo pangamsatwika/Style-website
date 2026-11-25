@@ -1,0 +1,869 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style website</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #b99591;
+            color: #34222f;
+        }
+
+        .custom-navbar {
+            background-color: #624551;
+            padding: 12px 0;
+        }
+
+        .navbar-brand {
+            color: #ffffff !important;
+            font-size: 23px;
+            font-weight: bold;
+        }
+
+        #menu-toggle {
+            display: none;
+        }
+
+        .menu-icon {
+            display: none;
+            color: white;
+            font-size: 25px;
+            cursor: pointer;
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-nav {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .navbar-nav .nav-link {
+            color: #ffffff !important;
+            transition: 0.3s;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #a997a3 !important;
+        }
+
+        .register-btn {
+            background-color: #a997a3;
+            color: #34222f;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .register-btn:hover {
+            background-color: #f5eeee;
+            color: #34222f;
+        }
+
+        .login-link {
+            display: inline-block;
+            background-color: #ffffff;
+            color: #624551 !important;
+            text-decoration: none !important;
+            padding: 8px 22px;
+            border-radius: 25px;
+            font-size: 18px;
+            font-weight: 600;
+            margin-left: 10px;
+            transition: 0.3s ease;
+        }
+
+        .login-link:hover {
+            background-color: #a997a3;
+            color: white !important;
+            text-decoration: none !important;
+        }
+
+        .hero {
+            min-height: 580px;
+
+            background-image:
+                linear-gradient(
+                    rgba(52, 34, 47, 0.35),
+                    rgba(52, 34, 47, 0.35)
+                ),
+                url("4.jpg");
+
+            background-size: cover;
+            background-position: center 35%;
+
+            display: flex;
+            align-items: center;
+            padding: 60px 8%;
+        }
+
+        .hero-content {
+            max-width: 520px;
+            background-color: transparent;
+            padding: 40px;
+            border-radius: 12px;
+        }
+
+        .hero-content h1 {
+            font-size: 46px;
+            font-weight: bold;
+            margin-bottom: 18px;
+        }
+
+        .hero-content p {
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+
+        .main-btn {
+            display: inline-block;
+            background-color: #624551;
+            color: white;
+            padding: 12px 28px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .main-btn:hover {
+            background-color: #a997a3;
+            color: #34222f;
+        }
+
+
+        .section-title {
+            text-align: center;
+            font-size: 35px;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        .section-description {
+            text-align: center;
+            color: #624551;
+            margin-bottom: 40px;
+        }
+
+
+        .about-section {
+            padding: 75px 0;
+            background-color: #f5eeee;
+        }
+
+        .about-image {
+            width: 100%;
+            height: 380px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .about-content h2 {
+            font-size: 31px;
+            font-weight: bold;
+            margin-bottom: 18px;
+        }
+
+        .about-content p {
+            line-height: 1.9;
+            color: #624551;
+        }
+
+        .products-section {
+            padding: 75px 0;
+            background-color: #b99591;
+        }
+
+        .product-card {
+            height: 100%;
+            background-color: #f5eeee;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 310px;
+            object-fit: cover;
+            transition: 0.4s;
+        }
+
+        .product-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .product-content {
+            padding: 22px;
+            text-align: center;
+        }
+
+        .product-content h3 {
+            font-size: 21px;
+            font-weight: bold;
+        }
+
+        .product-content p {
+            color: #624551;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .price {
+            font-size: 21px;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+
+        .buy-btn {
+            display: inline-block;
+            background-color: #624551;
+            color: white;
+            padding: 10px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .buy-btn:hover {
+            background-color: #a997a3;
+            color: #34222f;
+        }
+
+        .contact-section {
+            padding: 70px 0;
+            background-color: #f5eeee;
+        }
+
+        .contact-heading {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .contact-box {
+            display: flex;
+            flex-wrap: wrap;
+            background-color: white;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .contact-info {
+            flex: 1;
+            min-width: 250px;
+            padding: 40px;
+            background-color: #624551;
+            color: white;
+        }
+
+        .contact-info h3 {
+            margin-bottom: 20px;
+        }
+
+        .contact-info p {
+            margin-bottom: 22px;
+            line-height: 1.7;
+        }
+
+        .contact-info i {
+            margin-right: 10px;
+        }
+
+        .contact-form {
+            flex: 2;
+            min-width: 280px;
+            padding: 35px;
+        }
+
+        .contact-form label {
+            display: block;
+            margin-bottom: 8px;
+            color: #34222f;
+            font-weight: 600;
+        }
+
+        .contact-form .form-control {
+            padding: 12px;
+            border: 1px solid #d5c5cc;
+            border-radius: 7px;
+        }
+
+        .submit-btn {
+            background-color: #624551;
+            color: white;
+            border: none;
+            padding: 12px 28px;
+            border-radius: 7px;
+            cursor: pointer;
+        }
+
+        .submit-btn:hover {
+            background-color: #a997a3;
+            color: #34222f;
+        }
+
+
+        .footer {
+            background-color: #624551;
+            color: white;
+            padding: 50px 0 20px;
+        }
+
+        .footer-column {
+            padding: 10px 18px;
+        }
+
+        .footer h4 {
+            font-size: 19px;
+            font-weight: bold;
+            margin-bottom: 18px;
+        }
+
+        .footer p {
+            color: #f5eeee;
+            line-height: 1.8;
+            font-size: 14px;
+        }
+
+        .footer a {
+            display: block;
+            color: #f5eeee;
+            text-decoration: none;
+            margin-bottom: 12px;
+            font-size: 14px;
+        }
+
+        .footer a:hover {
+            color: #a997a3;
+        }
+
+        .social-icons a {
+            display: inline-block;
+            margin-right: 15px;
+            font-size: 22px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #a997a3;
+            text-align: center;
+            margin-top: 25px;
+            padding-top: 20px;
+        }
+
+        .footer-bottom p {
+            margin-bottom: 0;
+        }
+
+
+        @media (max-width: 768px) {
+
+            .custom-navbar .container {
+                flex-wrap: wrap;
+            }
+
+            .menu-icon {
+                display: block;
+            }
+
+            .nav-menu {
+                display: none;
+                width: 100%;
+                padding-top: 20px;
+            }
+
+            #menu-toggle:checked ~ .nav-menu {
+                display: block;
+            }
+
+            .navbar-nav {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 14px;
+            }
+
+            .hero {
+                min-height: 500px;
+                padding: 25px 18px;
+                background-position: center;
+            }
+
+            .hero-content {
+                padding: 25px;
+            }
+
+            .hero-content h1 {
+                font-size: 32px;
+            }
+
+            .about-section,
+            .products-section {
+                padding: 55px 15px;
+            }
+
+            .about-image {
+                height: 280px;
+                margin-bottom: 25px;
+            }
+
+            .section-title {
+                font-size: 29px;
+            }
+
+            .product-card img {
+                height: 280px;
+            }
+
+            .contact-section {
+                padding: 55px 15px;
+            }
+
+            .contact-form {
+                padding: 22px;
+            }
+
+            .footer {
+                text-align: center;
+            }
+
+            .footer-column {
+                padding: 15px;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+    <nav class="navbar custom-navbar">
+        <div class="container d-flex justify-content-between align-items-center">
+
+            <a href="#home" class="navbar-brand">
+                Style website
+            </a>
+
+            <input type="checkbox" id="menu-toggle">
+
+            <label for="menu-toggle" class="menu-icon">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+
+            <div class="nav-menu">
+                <ul class="navbar-nav">
+
+                    <li><a class="nav-link" href="" id="#home">Home</a></li>
+                    <li><a class="nav-link" href="" id="#about">About Us</a></li>
+                    <li><a class="nav-link" href="" id="#products">Products</a></li>
+                    <li><a class="nav-link" href="" id="#contact">Contact Us</a></li>
+                    <li><a class="login-link" href="login.html">Login</a></li>
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <h1>Discover Your Perfect Style</h1>
+
+            <p>
+                Explore a beautiful range of fashion and trendy collections.
+                Shop your favourite outfits and add a touch of elegance to every occasion.
+            </p>
+
+            <a href="#products" class="main-btn">
+                Explore Collection
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <section class="about-section" id="about">
+
+        <div class="container">
+
+            <h2 class="section-title">About Us</h2>
+
+            <div class="row align-items-center">
+
+                <div class="col-md-6">
+
+                    <img
+                        src="5.jpg"
+                        class="about-image"
+                        alt="Fashion shopping">
+
+                </div>
+
+                <div class="col-md-6 about-content">
+
+                    <h2>Discover Fashion, Love Your Style</h2>
+
+                    <p>
+                        Welcome to Style Website Of Shopping, your destination for stylish and trendy fashion.
+                        We bring you a beautiful collection of outfits that combine elegance, comfort, and confidence.
+                    </p>
+
+                    <p>
+                        Explore the latest fashion trends, discover your favourite outfits, and find the perfect look for every occasion.
+                    </p>
+
+                    <a href="#products" class="main-btn">
+                        Discover More
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="products-section" id="products">
+
+        <div class="container">
+
+            <h2 class="section-title">Our Collection</h2>
+
+            <p class="section-description">
+                Find your Style.
+            </p>
+
+            <div class="row g-4">
+
+                <div class="col-md-4">
+
+                    <div class="product-card">
+
+                        <img
+                            src="7.jpg"
+                            alt="Chic Co-Ord Set">
+
+                        <div class="product-content">
+
+                            <h3>Chic Co-Ord Set</h3>
+
+                            <p>
+                                Upgrade your wardrobe with matching
+                                stylish outfits that bring comfort,
+                                confidence and a modern look.
+                            </p>
+
+                            <div class="price">₹1,499</div>
+
+                            <a href="" class="buy-btn">
+                                Buy Now
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-4">
+
+                    <div class="product-card">
+
+                        <img
+                            src="8.jpg"
+                            alt="Stylish Jumpsuit">
+
+                        <div class="product-content">
+
+                            <h3>Stylish Jumpsuit</h3>
+
+                            <p>
+                                Discover trendy jumpsuits with
+                                fashionable designs, perfect for
+                                outings, celebrations and casual wear.
+                            </p>
+
+                            <div class="price">₹1,299</div>
+
+                            <a href="" class="buy-btn">
+                                Buy Now
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-4">
+
+                    <div class="product-card">
+
+                        <img
+                            src="10.jpg"
+                            alt="Oversized casual blazers">
+
+                        <div class="product-content">
+
+                            <h3>Oversized casual blazers</h3>
+
+                            <p>
+                                Stay fashionable with trendy oversized
+                                blazers. A perfect choice for casual
+                                outings and everyday styling.
+                            </p>
+
+                            <div class="price">₹1,899</div>
+
+                            <a href="" class="buy-btn">
+                                Buy Now
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="contact-section" id="contact">
+
+        <div class="container">
+
+            <div class="contact-heading">
+
+                <h2 class="section-title">Get In Touch</h2>
+
+                <p class="section-description">
+                    Have questions about our collections? We'd love to hear from you!
+                </p>
+
+            </div>
+
+            <div class="contact-box">
+
+                <div class="contact-info">
+
+                    <h3>Let's Connect</h3>
+
+                    <p>
+                        We're here to help you find your perfect style.
+                        Contact us for any queries or assistance.
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-envelope"></i>
+                        stylewebsite@gmail.com
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-phone"></i>
+                        +91 7995261219
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-location-dot"></i>
+                        India
+                    </p>
+
+                </div>
+
+                <form class="contact-form">
+
+                    <div class="row">
+
+                        <div class="col-md-6 mb-3">
+
+                            <label for="name">Your Name</label>
+
+                            <input type="text" id="name"
+                                class="form-control"
+                                placeholder="Enter your name" required>
+
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+
+                            <label for="email">Email Address</label>
+
+                            <input type="email" id="email"
+                                class="form-control"
+                                placeholder="Enter your email" required>
+
+                        </div>
+
+                    </div>
+
+                    <div class="mb-3">
+
+                        <label for="phone">Phone Number</label>
+
+                        <input type="tel" id="phone"
+                            class="form-control"
+                            placeholder="Enter your phone number">
+
+                    </div>
+
+                    <div class="mb-3">
+
+                        <label for="subject">Subject</label>
+
+                        <input type="text" id="subject"
+                            class="form-control"
+                            placeholder="Enter subject">
+
+                    </div>
+
+                    <div class="mb-3">
+
+                        <label for="message">Your Message</label>
+
+                        <textarea id="message"
+                            class="form-control"
+                            rows="4"
+                            placeholder="Write your message here..."
+                            required></textarea>
+
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        Send Message
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="row g-4">
+
+                <div class="col-md-3 footer-column">
+
+                    <h4>Style Website</h4>
+
+                    <p>
+                        Discover fashionable collections crafted for every moment.
+                        From casual wear to special occasions, find styles that make you stand out.
+                    </p>
+
+                    <p>
+                        Style yourself.
+                    </p>
+
+                </div>
+
+                <div class="col-md-3 footer-column">
+
+                    <h4>Quick Links</h4>
+
+                    <a href="#home">Home</a>
+                    <a href="#about">About Us</a>
+                    <a href="#products">Our Products</a>
+                    <a href="#contact">Contact Us</a>
+
+                </div>
+
+                <div class="col-md-3 footer-column">
+
+                    <h4>Customer Support</h4>
+
+                    <a href="register.html">My Account</a>
+                    <a href="register.html">Login / Register</a>
+                    <a href="#contact">Help & Support</a>
+                    <a href="#contact">Send an Enquiry</a>
+
+                </div>
+
+                <div class="col-md-3 footer-column">
+
+                    <h4>Contact & Follow Us</h4>
+
+                    <p>
+                        <i class="fa-solid fa-envelope"></i>
+                        stylewebsite@gmail.com
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-phone"></i>
+                        +91 7995261219
+                    </p>
+
+                    <div class="social-icons">
+
+                        <a href="#" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+
+                        <a href="#" aria-label="Facebook">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+
+                        <a href="#" aria-label="Twitter">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+
+                <p>
+                    © 2026 Style Website Of Shopping.
+                    All Rights Reserved.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>
